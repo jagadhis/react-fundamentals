@@ -1,10 +1,12 @@
 import './App.css';
+import Item from './Item';
 import Product from './Product';
 
 function App() {
   return (
     <div className="App">
       <Product name="Apple Iphone 13" description="Iphone" price={799} />
+      <Item name="Apple ipad pro" description="best Ipad" price={800} />
     </div>
   );
 }
