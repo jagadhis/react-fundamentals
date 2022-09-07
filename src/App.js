@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import './App.css';
 import Item from './Item';
 
@@ -7,6 +7,8 @@ import Product from './Product';
 function App() {
 
 const [count ,setCount] = useState(0);
+const [windowWidth,setwindowWidth] = useState(window.innerWidth);
+const [name,setName] = useState("");
 
 const increment=() => {
   setCount(count + 1)
