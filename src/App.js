@@ -10,6 +10,17 @@ const [count ,setCount] = useState(0);
 const [windowWidth,setwindowWidth] = useState(window.innerWidth);
 const [name,setName] = useState("");
 
+
+useEffect(() => {
+  console.log("Re-rendered");
+})
+  
+
+{/*componentDidMount alternative renderes only one time when the Component mounts */}
+useEffect(() => {
+console.log("Mounted");
+},[])
+
 const increment=() => {
   setCount(count + 1)
 }
