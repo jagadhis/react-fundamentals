@@ -1,10 +1,10 @@
 import React from 'react'
+import Cart from './Cart'
 
 function Item({name,description,price}) {
   return (
     <div>
-        <h3>{name}</h3>
-        <h3>{description}</h3>
+         <Cart name={name} description={description} />
         <h3>{price}</h3>
     </div>
   )
