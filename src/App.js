@@ -17,10 +17,13 @@ const decrement=() => {
   return (
     <div className="App">
 
+        {/* State Example*/} 
       <h1>A Counter App</h1>
       <p>The Count is : {count}</p>
       <button onClick={increment}>Add</button>
       <button onClick={decrement}>Less</button>
+
+
         {/* Normal Props */}
       <Product name="Apple Iphone 13" description="Iphone" price={799} />
         {/* destructuring Props */}
