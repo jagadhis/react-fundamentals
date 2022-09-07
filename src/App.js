@@ -1,15 +1,18 @@
+import React, {useState} from 'react';
 import './App.css';
 import Item from './Item';
+
 import Product from './Product';
 
 function App() {
-let count=0;
+
+const [count ,setCount] = useState(0);
 
 const increment=() => {
-  count += 1;
+  setCount(count + 1)
 }
 const decrement=() => {
-  count -= 1;
+  setCount(count -1);
 }
   return (
     <div className="App">
