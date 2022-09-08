@@ -25,6 +25,17 @@ useEffect(()=>{
   console.log(`the name is changed: ${name}`)
 },[name])
 
+useEffect(()=> {
+  window.addEventListener("resize",updateWindowWidth);
+  return () => {
+
+  }
+})
+
+const updateWindowWidth = () => {
+  setwindowWidth(window.innerWidth);
+}
+
 const increment=() => {
   setCount(count + 1)
 }
@@ -46,6 +57,8 @@ const decrement=() => {
 
       {/* useEffect Example*/} 
       <div>
+      <h3>The UseEffect Hook Example</h3>
+      <p>The window Width is : {windowWidth}</p>
       <input 
       value={name} 
       onChange= {(e) => setName(e.target.value)}
