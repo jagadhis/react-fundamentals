@@ -26,9 +26,11 @@ useEffect(()=>{
 },[name])
 
 useEffect(()=> {
+  console.log("attach listener")
   window.addEventListener("resize",updateWindowWidth);
   return () => {
-
+    window.removeEventListener("resize",updateWindowWidth);
+    console.log("detach listener")
   }
 })
 
